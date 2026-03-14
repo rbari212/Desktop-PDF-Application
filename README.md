@@ -127,15 +127,17 @@ After the build completes:
 If Gatekeeper warns about launching an unsigned app, sign or notarize the bundle using your Apple Developer workflow before distributing it.
 
 ## Notes
-
+Command to start using, make sure to save in the same directory
+```powershell
+cd ""C:\Users\rizvi\Projects\PDF Merge Application"
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+py -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe .\src\main.py
+```
 - The password workflow prefers AES encryption when the optional crypto backend used by `pypdf` is available. If it is not available, the app falls back to `pypdf`'s default compatible encryption so the feature still works with the required dependency set.
 - Compression is lossless for content streams. Actual file size reduction depends on the structure of the source PDF.
 - Some malformed or heavily secured PDFs may preview or process differently depending on the source document.
 >>>>>>> 7fd4283 (Desktop PDF Application)
->>>>>>> Command to start using, make sure to save in the same directory
->>>>>>> cd ""C:\Users\rizvi\Projects\PDF Merge Application"
->>>>>>> py -m venv .venv
->>>>>>> .\.venv\Scripts\Activate.ps1
->>>>>>> py -m pip install -r requirements.txt
->>>>>>> .\.venv\Scripts\python.exe .\src\main.py
+
 
