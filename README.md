@@ -132,3 +132,10 @@ If Gatekeeper warns about launching an unsigned app, sign or notarize the bundle
 - Compression is lossless for content streams. Actual file size reduction depends on the structure of the source PDF.
 - Some malformed or heavily secured PDFs may preview or process differently depending on the source document.
 >>>>>>> 7fd4283 (Desktop PDF Application)
+>>>>>>> Command to start using, make sure to save in the same directory
+>>>>>>> cd "C:\Path\To\Desktop-PDF-Application"
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+py -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe .\src\main.py
+
